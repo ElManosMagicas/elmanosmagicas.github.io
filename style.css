@@ -59,7 +59,7 @@ header ul li a:active {
   color: #2b1055;
 }
 
-section {
+.first {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -70,7 +70,7 @@ section {
   overflow: hidden;
 }
 
-section::before {
+.first::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -80,7 +80,7 @@ section::before {
   z-index: 1000;
 }
 
-section img {
+.first img {
   position: absolute;
   top: 0;
   left: 0;
@@ -90,11 +90,11 @@ section img {
   pointer-events: none;
 }
 
-section img#moon {
+.first img#moon {
   mix-blend-mode: screen;
 }
 
-section img#mountains-front {
+.first img#mountains-front {
   z-index: 10;
 }
 
@@ -120,19 +120,110 @@ section img#mountains-front {
   max-height: 50px;
 }
 
-.paragraph {
+.second {
   position: relative;
   padding: 100px;
   background: #1c0522;
 }
 
-.paragraph h2 {
+.second h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
-.paragraph p {
+.second p {
   font-size: 1.2em;
   color: #ffffff;
+}
+
+#scroll-to-third-section {
+  all: unset;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+section.third {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  overflow: hidden;
+}
+
+section.third img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section.third img.right-tree {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 0.75s ease-in-out;
+}
+
+section.third img.left-tree {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 0.85s ease-in-out;
+}
+
+section.third img.right-bush {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 1s ease-in-out;
+}
+
+section.third img.left-bush {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 1.1s ease-in-out;
+}
+
+section.third img.cuyo {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 1.2s ease-in-out;
+}
+
+section.third img.tingua {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 1.4s ease-in-out;
+}
+
+section.third img.turtle {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 1.6s ease-in-out;
 }
