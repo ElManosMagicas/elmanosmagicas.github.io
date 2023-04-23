@@ -175,3 +175,15 @@ window.addEventListener('scroll', function () {
     introTurtle.style.top = `100%`;
   }
 });
+
+function toggleAudioBtn() {
+  var mirlaAudioBtn = document.getElementById('mirla-audio-btn');
+  var mirlaAudio = document.getElementById('mirla-audio');
+  if (mirlaAudioBtn.classList.contains('clicked')) {
+    mirlaAudioBtn.classList.remove('clicked');
+    mirlaAudio.pause();
+  } else {
+    mirlaAudioBtn.classList.add('clicked');
+    mirlaAudio.paused ? mirlaAudio.play() : mirlaAudio.pause();
+  }
+}
