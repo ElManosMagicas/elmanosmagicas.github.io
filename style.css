@@ -131,14 +131,45 @@ body {
   right: 0;
   height: auto;
   max-width: 400px;
-    /* Make the GIFs responsive */
 }
 .left-gif {
   position: absolute;
   left: 0;
   height: auto;
   max-width: 400px;
-  /* Make the GIFs responsive */
+}
+
+.texts-container {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  z-index: 7;
+}
+
+.texts-container .text-1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 656px;
+  height: 240px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.texts-container .text-2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 656px;
+  height: 240px;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .container section.interactive {
