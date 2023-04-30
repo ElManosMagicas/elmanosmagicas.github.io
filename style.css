@@ -26,7 +26,6 @@ body {
 }
 
 .container section.forest {
-  background: greenyellow;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -130,13 +129,13 @@ body {
   position: absolute;
   right: 0;
   height: auto;
-  max-width: 400px;
+  max-width: 500px;
 }
 .left-gif {
   position: absolute;
   left: 0;
   height: auto;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .forest-texts-container {
@@ -173,9 +172,75 @@ body {
 }
 
 .container section.interactive {
-  background: blue;
+  position: relative;
   width: 100%;
-  height: 720px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.interactive-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.interactive-left-tree-container {
+  position: absolute;
+  top: 0;
+  right: 34%;
+  width: 273px;
+  height: 464px;
+  display: flex;
+  z-index: 2;
+}
+
+.interactive-left-tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.interactive-tingua-state-1 {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 110px;
+  height: 154px;
+}
+
+.interactive-tingua-state-2 {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: 130px;
+  height: 122px;
+  display: none;
+}
+
+
+.interactive-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
+.interactive-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
+.speakers {
+  width: 90px;
+  height: 94px;
 }
 
 /* .first {
