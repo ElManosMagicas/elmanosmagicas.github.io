@@ -35,7 +35,7 @@ body {
   overflow: hidden;
 }
 
-.container section.forest .background {
+.container section.forest .forest-background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -43,7 +43,7 @@ body {
   pointer-events: none;
 }
 
-.trees-container {
+.forest-trees-container {
   position: absolute;
   top: 0;
   width: 100%;
@@ -53,19 +53,19 @@ body {
   z-index: 2;
 }
 
-.trees-container .right-tree {
+.forest-trees-container .right-tree {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.trees-container .left-tree {
+.forest-trees-container .left-tree {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.container section.forest .effects {
+.container section.forest .forest-effects {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,7 +73,7 @@ body {
   pointer-events: none;
 }
 
-.animals-container {
+.forest-animals-container {
   position: absolute;
   bottom: 0;
   left: 24%;
@@ -115,7 +115,7 @@ body {
   pointer-events: none;
 }
 
-.gif-container {
+.forest-gif-container {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -139,7 +139,7 @@ body {
   max-width: 400px;
 }
 
-.texts-container {
+.forest-texts-container {
   position: absolute;
   top: 5%;
   left: 0;
@@ -150,7 +150,7 @@ body {
   z-index: 7;
 }
 
-.texts-container .text-1 {
+.forest-texts-container .text-1 {
   position: absolute;
   top: 0;
   left: 50%;
@@ -161,7 +161,7 @@ body {
   pointer-events: none;
 }
 
-.texts-container .text-2 {
+.forest-texts-container .text-2 {
   position: absolute;
   top: 0;
   left: 50%;
