@@ -222,7 +222,7 @@ body {
 }
 
 
-.interactive-sound-btn-on {
+.interactive-left-tree-container .interactive-sound-btn-on {
   all: unset;
   cursor: pointer;
   position: absolute;
@@ -230,7 +230,7 @@ body {
   left: 18%;
 }
 
-.interactive-sound-btn-off {
+.interactive-left-tree-container .interactive-sound-btn-off {
   all: unset;
   cursor: pointer;
   position: absolute;
@@ -241,6 +241,122 @@ body {
 .speakers {
   width: 90px;
   height: 94px;
+}
+
+.interactive-right-tree-container {
+  position: absolute;
+  top: 0;
+  right: 6%;
+  width: 412px;
+  height: 724px;
+  display: flex;
+  z-index: 3;
+}
+
+.interactive-snake {
+  position: absolute;
+  bottom: 8%;
+  right: 0;
+  width: 200px;
+  height: 212px;
+}
+
+.interactive-right-tree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 412px;
+  height: 724px;
+  z-index: 4;
+}
+
+.interactive-tucan-state-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153px;
+  height: 182px;
+  z-index: 5;
+}
+
+.interactive-tucan-state-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153px;
+  height: 182px;
+  z-index: 5;
+}
+
+.interactive-right-tree-container .interactive-tucan-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 19%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-tucan-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 19%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-snake-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-snake-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  z-index: 6;
+}
+
+.interactive-animals-container {
+  position: absolute;
+  bottom: 14%;
+  left: 0;
+  width: 820px;
+  height: 250px;
+  z-index: 7;
+}
+
+.interactive-tingua {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 314px;
+  height: 250px;
+  z-index: 9;
+}
+
+.interactive-turtle {
+  position: absolute;
+  bottom: 20%;
+  left: 19%;
+  width: 281px;
+  height: 216px;
+  z-index: 8;
+}
+
+.interactive-cuyo {
+  position: absolute;
+  bottom: 38%;
+  left: 44%;
+  width: 225px;
+  height: 180px;
 }
 
 /* .first {
