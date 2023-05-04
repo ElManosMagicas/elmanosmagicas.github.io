@@ -20,9 +20,82 @@ body {
 }
 
 .container section.map {
-  background: orange;
+  position: relative;
   width: 100%;
-  height: 720px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container section.map .map-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.map-buttons-container {
+  position: relative;
+  width: 940px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.map-logs {
+  width: 719px;
+  height: 399px;
+}
+
+.map-buttons-container .map-tree-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: -12%;
+  left: 32%;
+}
+
+.map-buttons-container .map-city-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+}
+
+.map-buttons-container .map-waterland-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 14%;
+  left: 4%;
+}
+
+.cuyo-marker {
+  position: absolute;
+  bottom: 42%;
+  left: 8%;
+  width: 182px;
+  height: 200px;
+  z-index: 3;
+}
+
+.island {
+  width: 272px;
+  height: 274px;
+}
+
+.map-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 475px;
+  height: 160px;
 }
 
 .container section.forest {
