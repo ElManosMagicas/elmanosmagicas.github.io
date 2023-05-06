@@ -326,7 +326,7 @@ body {
   width: 273px;
   height: 464px;
   display: flex;
-  z-index: 2;
+  z-index: 3;
 }
 
 .interactive-left-tree {
@@ -353,7 +353,7 @@ body {
 }
 
 
-.interactive-left-tree-container .interactive-sound-btn-on {
+.interactive-left-tree-container .interactive-mirla-sound-btn-on {
   all: unset;
   cursor: pointer;
   position: absolute;
@@ -361,7 +361,7 @@ body {
   left: 18%;
 }
 
-.interactive-left-tree-container .interactive-sound-btn-off {
+.interactive-left-tree-container .interactive-mirla-sound-btn-off {
   all: unset;
   cursor: pointer;
   position: absolute;
@@ -381,7 +381,7 @@ body {
   width: 412px;
   height: 724px;
   display: flex;
-  z-index: 3;
+  z-index: 4;
 }
 
 .interactive-snake {
@@ -398,7 +398,7 @@ body {
   right: 0;
   width: 412px;
   height: 724px;
-  z-index: 4;
+  z-index: 5;
 }
 
 .interactive-tucan-state-1 {
@@ -407,7 +407,7 @@ body {
   right: 0;
   width: 153px;
   height: 182px;
-  z-index: 5;
+  z-index: 6;
 }
 
 .interactive-tucan-state-2 {
@@ -416,7 +416,7 @@ body {
   right: 0;
   width: 153px;
   height: 182px;
-  z-index: 5;
+  z-index: 6;
 }
 
 .interactive-right-tree-container .interactive-tucan-sound-btn-on {
@@ -425,7 +425,7 @@ body {
   position: absolute;
   top: 30%;
   right: 19%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .interactive-right-tree-container .interactive-tucan-sound-btn-off {
@@ -434,7 +434,7 @@ body {
   position: absolute;
   top: 30%;
   right: 19%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .interactive-right-tree-container .interactive-snake-sound-btn-on {
@@ -443,7 +443,7 @@ body {
   position: absolute;
   bottom: 6%;
   right: 20%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .interactive-right-tree-container .interactive-snake-sound-btn-off {
@@ -452,7 +452,7 @@ body {
   position: absolute;
   bottom: 6%;
   right: 20%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .interactive-animals-container {
@@ -461,7 +461,7 @@ body {
   left: 0;
   width: 820px;
   height: 250px;
-  z-index: 7;
+  z-index: 8;
 }
 
 .interactive-tingua {
@@ -470,7 +470,7 @@ body {
   left: 0;
   width: 314px;
   height: 250px;
-  z-index: 9;
+  z-index: 10;
 }
 
 .interactive-turtle {
@@ -479,7 +479,7 @@ body {
   left: 19%;
   width: 281px;
   height: 216px;
-  z-index: 8;
+  z-index: 9;
 }
 
 .interactive-cuyo {
@@ -500,7 +500,7 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
-  z-index: 10;
+  z-index: 2;
 }
 
 .interactive-navigation-btn {
