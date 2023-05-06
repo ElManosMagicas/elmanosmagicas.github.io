@@ -10,22 +10,21 @@
 
 body {
   background: whitesmoke;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .container {
   position: relative;
   height: 100%;
-    /* Set the height of the container to 100% */
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 .container section.map {
   position: relative;
-  width: 100%;
+  display: inline-block;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -38,7 +37,10 @@ body {
 }
 
 .map-buttons-container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 940px;
   height: 600px;
   display: flex;
@@ -98,12 +100,34 @@ body {
   height: 160px;
 }
 
+.map-arrows-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.map-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.map-arrow {
+  width: 60px;
+  height: 60px;
+}
+
 .container section.forest {
   position: relative;
-  width: 100%;
+  display: inline-block;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -244,12 +268,34 @@ body {
   pointer-events: none;
 }
 
+.forest-arrows-container {
+  position: absolute;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.forest-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.forest-arrow {
+  width: 60px;
+  height: 60px;
+}
+
 .container section.interactive {
   position: relative;
-  width: 100%;
+  display: inline-block;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -430,6 +476,29 @@ body {
   left: 44%;
   width: 225px;
   height: 180px;
+}
+
+.interactive-arrows-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.interactive-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.interactive-arrow {
+  width: 60px;
+  height: 60px;
 }
 
 /* .first {

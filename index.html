@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <section class="map">
+      <section id="map-section" class="map">
         <img
           class="map-background"
           src="./assets/escena-0-mapa-decisiones/0-fondo.png"
@@ -21,14 +21,14 @@
             src="./assets/escena-0-mapa-decisiones/1-tronco.png"
             alt="Fondo mapa de decisiones"
           />
-          <button type="button" class="map-tree-btn">
+          <button type="button" disabled class="map-tree-btn">
             <img
               class="island"
               src="./assets/escena-0-mapa-decisiones/2-bosque-off.png"
               alt="Botón de bosque"
             />
           </button>
-          <button type="button" class="map-city-btn">
+          <button type="button" disabled class="map-city-btn">
             <img
               class="island"
               src="./assets/escena-0-mapa-decisiones/3-ciudad-off.png"
@@ -49,9 +49,25 @@
           />
         </div>
         <img class="map-text" src="./assets/escena-0-mapa-decisiones/5-texto.png" alt="Texto" />
+        <div class="map-arrows-container">
+          <button type="button" id="map-back-btn" class="map-navigation-btn">
+            <img
+              class="map-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="map-next-btn" class="map-navigation-btn">
+            <img
+              class="map-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
+        </div>
       </section>
 
-      <section class="forest">
+      <section id="forest-section" class="forest">
         <img
           class="forest-background"
           src="./assets/escena-1-bosque/0-fondo.png"
@@ -94,9 +110,25 @@
           <img class="text-1" src="./assets/escena-1-bosque/8-texto-1.png" alt="Texto 1" />
           <img class="text-2" src="./assets/escena-1-bosque/9-texto-2.png" alt="Texto 2" />
         </div>
+        <div class="forest-arrows-container">
+          <button type="button" id="forest-back-btn" class="forest-navigation-btn">
+            <img
+              class="forest-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="forest-next-btn" class="forest-navigation-btn">
+            <img
+              class="forest-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
+        </div>
       </section>
 
-      <section class="interactive">
+      <section id="interactive-section" class="interactive">
         <img
           class="interactive-background"
           src="./assets/escena-2-interacciones/0-fondo.png"
@@ -168,6 +200,22 @@
             src="./assets/escena-2-interacciones/3-cuyo.png"
             alt="Cuyo"
           />
+        </div>
+        <div class="interactive-arrows-container">
+          <button type="button" id="interactive-back-btn" class="interactive-navigation-btn">
+            <img
+              class="interactive-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="interactive-next-btn" class="interactive-navigation-btn">
+            <img
+              class="interactive-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
         </div>
       </section>
     </div>
