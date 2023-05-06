@@ -335,7 +335,7 @@ body {
   left: 0;
 }
 
-.interactive-tingua-state-1 {
+.interactive-mirla-state-1 {
   position: absolute;
   top: 0;
   left: 12%;
@@ -343,7 +343,7 @@ body {
   height: 154px;
 }
 
-.interactive-tingua-state-2 {
+.interactive-mirla-state-2 {
   position: absolute;
   top: 8%;
   left: 5%;
@@ -500,12 +500,16 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
-  z-index: 10;
+  z-index: 1;
 }
 
 .interactive-navigation-btn {
   all: unset;
   cursor: pointer;
+}
+
+.interactive-navigation-btn.disabled-btn {
+  cursor: not-allowed;
 }
 
 .interactive-arrow {
