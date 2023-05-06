@@ -4,107 +4,221 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parallax Testing</title>
+    <title>El camino de la tortuga</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <a href="#" class="logo">Logo</a>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </header>
-    <section class="first">
-      <img src="/assets/estrellas.png" id="stars" alt="Estrellas" />
-      <img src="/assets/luna.png" id="moon" alt="Luna" />
-      <img src="/assets/montanas-atras.png" id="mountains-behind" alt="Montanas Atrás" />
-      <h2 id="title">Parallax Testing</h2>
-      <a href="#paragraph" id="btn">Explore</a>
-      <img src="/assets/montanas-frente.png" id="mountains-front" alt="Montanas Frente" />
-    </section>
+    <div class="container">
+      <section id="map-section" class="map">
+        <img
+          class="map-background"
+          src="./assets/escena-0-mapa-decisiones/0-fondo.png"
+          alt="Fondo mapa de decisiones"
+        />
+        <div class="map-buttons-container">
+          <img
+            class="map-logs"
+            src="./assets/escena-0-mapa-decisiones/1-tronco.png"
+            alt="Fondo mapa de decisiones"
+          />
+          <button type="button" class="map-tree-btn disabled-btn" disabled>
+            <img
+              class="island"
+              src="./assets/escena-0-mapa-decisiones/2-bosque-off.png"
+              alt="Botón de bosque"
+            />
+          </button>
+          <button type="button" class="map-city-btn disabled-btn" disabled>
+            <img
+              class="island"
+              src="./assets/escena-0-mapa-decisiones/3-ciudad-off.png"
+              alt="Botón de ciudad"
+            />
+          </button>
+          <button type="button" id="map-waterland-btn" class="map-waterland-btn">
+            <img
+              class="island"
+              src="./assets/escena-0-mapa-decisiones/3-humedal-on.png"
+              alt="Botón de humedad"
+            />
+          </button>
+          <img
+            class="cuyo-marker"
+            src="./assets/escena-0-mapa-decisiones/4-guía-cuyo.png"
+            alt="Marcador de Cuyo"
+          />
+        </div>
+        <img class="map-text" src="./assets/escena-0-mapa-decisiones/5-texto.png" alt="Texto" />
+        <div class="map-arrows-container">
+          <button type="button" id="map-back-btn" class="map-navigation-btn disabled-btn">
+            <img
+              class="map-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="map-next-btn" class="map-navigation-btn">
+            <img
+              class="map-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
+        </div>
+      </section>
 
-    <section class="second" id="paragraph">
-      <h2>Parallax Scrolling Effect</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit corrupti nihil, veritatis
-        eius consequatur amet aspernatur inventore, possimus quas doloribus esse similique sed
-        provident culpa cumque necessitatibus officia quos. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Deleniti inventore deserunt tempora earum excepturi totam ea sint ab
-        blanditiis ex similique esse molestias, optio iure nisi quasi saepe dignissimos non! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Placeat ex similique reprehenderit culpa
-        possimus deserunt! Autem illum ea ipsa? Animi dolor odit ex ut illo asperiores fugit libero
-        tempora neque!<br /><br />
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit corrupti nihil, veritatis
-        eius consequatur amet aspernatur inventore, possimus quas doloribus esse similique sed
-        provident culpa cumque necessitatibus officia quos. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Deleniti inventore deserunt tempora earum excepturi totam ea sint ab
-        blanditiis ex similique esse molestias, optio iure nisi quasi saepe dignissimos non! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Placeat ex similique reprehenderit culpa
-        possimus deserunt! Autem illum ea ipsa? Animi dolor odit ex ut illo asperiores fugit libero
-        tempora neque!<br /><br />
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit corrupti nihil, veritatis
-        eius consequatur amet aspernatur inventore, possimus quas doloribus esse similique sed
-        provident culpa cumque necessitatibus officia quos. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Deleniti inventore deserunt tempora earum excepturi totam ea sint ab
-        blanditiis ex similique esse molestias, optio iure nisi quasi saepe dignissimos non! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Placeat ex similique reprehenderit culpa
-        possimus deserunt! Autem illum ea ipsa? Animi dolor odit ex ut illo asperiores fugit libero
-        tempora neque!<br /><br />
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit corrupti nihil, veritatis
-        eius consequatur amet aspernatur inventore, possimus quas doloribus esse similique sed
-        provident culpa cumque necessitatibus officia quos. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Deleniti inventore deserunt tempora earum excepturi totam ea sint ab
-        blanditiis ex similique esse molestias, optio iure nisi quasi saepe dignissimos non! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Placeat ex similique reprehenderit culpa
-        possimus deserunt! Autem illum ea ipsa? Animi dolor odit ex ut illo asperiores fugit libero
-        tempora neque!<br /><br />
-        <button id="scroll-to-third">Sigue bajando</button>
-      </p>
-    </section>
+      <section id="forest-section" class="forest">
+        <img
+          class="forest-background"
+          src="./assets/escena-1-bosque/0-fondo.png"
+          alt="Fondo bosque"
+        />
+        <div class="forest-trees-container">
+          <img
+            class="right-tree"
+            src="./assets/escena-1-bosque/1-arbol-derecho.png"
+            alt="Árbol derecho"
+          />
+          <img
+            class="left-tree"
+            src="./assets/escena-1-bosque/1-arbol-izquierdo.png"
+            alt="Árbol izquierdo"
+          />
+        </div>
 
-    <section id="third" class="third">
-      <img id="third-bg" src="./assets/escena-de-prueba/1.png" alt="Fondo" />
-      <img
-        id="third-right-tree"
-        class="right-tree"
-        src="./assets/escena-de-prueba/2.png"
-        alt="Árbol de la derecha"
-      />
-      <img
-        id="third-left-tree"
-        class="left-tree"
-        src="./assets/escena-de-prueba/3.png"
-        alt="Árbol de la izquierda"
-      />
-      <img
-        id="third-right-bush"
-        class="right-bush"
-        src="./assets/escena-de-prueba/4.png"
-        alt="Arbusto de la derecha"
-      />
-      <img
-        id="third-left-bush"
-        class="left-bush"
-        src="./assets/escena-de-prueba/5.png"
-        alt="Arbusto de la izquierda"
-      />
-      <img id="third-cuyo" class="cuyo" src="./assets/escena-de-prueba/cuyo.png" alt="Cuyo" />
-      <img
-        id="third-tingua"
-        class="tingua"
-        src="./assets/escena-de-prueba/tingua.png"
-        alt="Tingua"
-      />
-      <img
-        id="third-turtle"
-        class="turtle"
-        src="./assets/escena-de-prueba/tortuga.png"
-        alt="Tortuga"
-      />
-    </section>
+        <img class="forest-effects" src="./assets/escena-1-bosque/2-efecto-1.png" alt="Efecto 1" />
+        <img class="forest-effects" src="./assets/escena-1-bosque/2-efecto-2.png" alt="Efecto 2" />
+
+        <div class="forest-animals-container">
+          <img class="cuyo" src="./assets/escena-1-bosque/4-cuyo.png" alt="Cuyo" />
+          <img class="turtle" src="./assets/escena-1-bosque/3-tortuga.png" alt="Tortuga" />
+          <img class="tingua" src="./assets/escena-1-bosque/5-tingua.png" alt="Tingua" />
+        </div>
+        <div class="forest-gif-container">
+          <img
+            class="right-gif"
+            src="./assets/escena-1-bosque/6-arbusto-derecho.gif"
+            alt="Arbusto derecho"
+          />
+          <img
+            class="left-gif"
+            src="./assets/escena-1-bosque/7-arbusto-izquierdo.gif"
+            alt="Arbusto izquierdo"
+          />
+        </div>
+        <div class="forest-texts-container">
+          <img class="text-1" src="./assets/escena-1-bosque/8-texto-1.png" alt="Texto 1" />
+          <img class="text-2" src="./assets/escena-1-bosque/9-texto-2.png" alt="Texto 2" />
+        </div>
+        <div class="forest-arrows-container">
+          <button type="button" id="forest-back-btn" class="forest-navigation-btn">
+            <img
+              class="forest-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="forest-next-btn" class="forest-navigation-btn">
+            <img
+              class="forest-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="interactive-section" class="interactive">
+        <img
+          class="interactive-background"
+          src="./assets/escena-2-interacciones/0-fondo.png"
+          alt="Fondo bosque"
+        />
+        <div class="interactive-left-tree-container">
+          <img
+            class="interactive-left-tree"
+            src="./assets/escena-2-interacciones/1-arbol-rama-izquierda.png"
+            alt="Árbol rama izquierda"
+          />
+          <img
+            class="interactive-tingua-state-1"
+            src="./assets/escena-2-interacciones/1-mirla-estado-1.png"
+            alt="Tingua estado 1"
+          />
+          <button type="button" class="interactive-sound-btn-off">
+            <img
+              class="speakers"
+              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
+              alt="Botón de sonido encendido"
+            />
+          </button>
+        </div>
+        <div class="interactive-right-tree-container">
+          <img
+            class="interactive-snake"
+            src="./assets/escena-2-interacciones/2-serpiente-estado-1.png"
+            alt="Serpiente"
+          />
+          <img
+            class="interactive-right-tree"
+            src="./assets/escena-2-interacciones/2-arbol-rama-derecha.png"
+            alt="Árbol rama derecha"
+          />
+          <img
+            class="interactive-tucan-state-1"
+            src="./assets/escena-2-interacciones/2-tucan-estado-1.png"
+            alt="Tucán estado 1"
+          />
+          <button type="button" class="interactive-tucan-sound-btn-on">
+            <img
+              class="speakers"
+              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
+              alt="Botón de sonido encendido"
+            />
+          </button>
+          <button type="button" class="interactive-snake-sound-btn-on">
+            <img
+              class="speakers"
+              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
+              alt="Botón de sonido encendido"
+            />
+          </button>
+        </div>
+        <div class="interactive-animals-container">
+          <img
+            class="interactive-tingua"
+            src="./assets/escena-2-interacciones/3-tingua.png"
+            alt="Tingua"
+          />
+          <img
+            class="interactive-turtle"
+            src="./assets/escena-2-interacciones/3-tortuga.png"
+            alt="Tortuga"
+          />
+          <img
+            class="interactive-cuyo"
+            src="./assets/escena-2-interacciones/3-cuyo.png"
+            alt="Cuyo"
+          />
+        </div>
+        <div class="interactive-arrows-container">
+          <button type="button" id="interactive-back-btn" class="interactive-navigation-btn">
+            <img
+              class="interactive-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              alt="Botón de retroceder"
+            />
+          </button>
+          <button type="button" id="interactive-next-btn" class="interactive-navigation-btn">
+            <img
+              class="interactive-arrow"
+              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              alt="Botón de avanzar"
+            />
+          </button>
+        </div>
+      </section>
+    </div>
 
     <script src="main.js"></script>
   </body>

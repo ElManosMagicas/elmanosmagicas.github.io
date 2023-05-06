@@ -9,57 +9,511 @@
 }
 
 body {
-  background: linear-gradient(#2b1055, #7597de);
-  min-height: 100vh;
-  overflow-x: hidden;
+  background: whitesmoke;
+  overflow-y: hidden;
 }
 
-header {
+.container {
+  position: relative;
+  height: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.container section.map {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container section.map .map-background {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 100px;
-  z-index: 10000;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
-header .logo {
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-header ul {
+.map-buttons-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 940px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
-header ul li {
-  list-style: none;
-  margin-left: 20px;
+.map-logs {
+  width: 719px;
+  height: 399px;
 }
 
-header ul li a {
-  text-decoration: none;
-  padding: 6px 15px;
-  color: #ffffff;
-  border-radius: 18px;
+.map-buttons-container .map-tree-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: -12%;
+  left: 32%;
 }
 
-header ul li a:hover,
-header ul li a:active {
-  background: #ffffff;
-  color: #2b1055;
+.map-buttons-container .map-tree-btn.disabled-btn {
+  cursor: not-allowed;
 }
 
-.first {
+.map-buttons-container .map-city-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+}
+
+.map-buttons-container .map-city-btn.disabled-btn {
+  cursor: not-allowed;
+}
+
+.map-buttons-container .map-waterland-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 14%;
+  left: 4%;
+}
+
+.cuyo-marker {
+  position: absolute;
+  bottom: 42%;
+  left: 8%;
+  width: 182px;
+  height: 200px;
+  z-index: 3;
+}
+
+.island {
+  width: 272px;
+  height: 274px;
+}
+
+.map-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 475px;
+  height: 160px;
+}
+
+.map-arrows-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.map-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.map-navigation-btn.disabled-btn {
+  cursor: not-allowed;
+}
+
+.map-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.container section.forest {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container section.forest .forest-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.forest-trees-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.forest-trees-container .right-tree {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.forest-trees-container .left-tree {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.container section.forest .forest-effects {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.forest-animals-container {
+  position: absolute;
+  bottom: 0;
+  left: 24%;
+  width: 100%;
+  max-width: 900px;
+  height: 370px;
+  display: flex;
+  flex-direction: row;
+  z-index: 5;
+}
+
+.turtle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 382px;
+  height: 260px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.cuyo {
+  position: absolute;
+  bottom: 0;
+  left: 36%;
+  width: 339px;
+  height: 236px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.tingua {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 312px;
+  height: 368px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.forest-gif-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  z-index: 6;
+}
+
+.right-gif {
+  position: absolute;
+  right: 0;
+  height: auto;
+  max-width: 500px;
+}
+.left-gif {
+  position: absolute;
+  left: 0;
+  height: auto;
+  max-width: 500px;
+}
+
+.forest-texts-container {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  z-index: 7;
+}
+
+.forest-texts-container .text-1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 656px;
+  height: 240px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.forest-texts-container .text-2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 656px;
+  height: 240px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.forest-arrows-container {
+  position: absolute;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.forest-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.forest-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.container section.interactive {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.interactive-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.interactive-left-tree-container {
+  position: absolute;
+  top: 0;
+  right: 34%;
+  width: 273px;
+  height: 464px;
+  display: flex;
+  z-index: 2;
+}
+
+.interactive-left-tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.interactive-tingua-state-1 {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 110px;
+  height: 154px;
+}
+
+.interactive-tingua-state-2 {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: 130px;
+  height: 122px;
+  display: none;
+}
+
+
+.interactive-left-tree-container .interactive-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
+.interactive-left-tree-container .interactive-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
+.speakers {
+  width: 90px;
+  height: 94px;
+}
+
+.interactive-right-tree-container {
+  position: absolute;
+  top: 0;
+  right: 6%;
+  width: 412px;
+  height: 724px;
+  display: flex;
+  z-index: 3;
+}
+
+.interactive-snake {
+  position: absolute;
+  bottom: 8%;
+  right: 0;
+  width: 200px;
+  height: 212px;
+}
+
+.interactive-right-tree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 412px;
+  height: 724px;
+  z-index: 4;
+}
+
+.interactive-tucan-state-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153px;
+  height: 182px;
+  z-index: 5;
+}
+
+.interactive-tucan-state-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153px;
+  height: 182px;
+  z-index: 5;
+}
+
+.interactive-right-tree-container .interactive-tucan-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 19%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-tucan-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 19%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-snake-sound-btn-on {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  z-index: 6;
+}
+
+.interactive-right-tree-container .interactive-snake-sound-btn-off {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  z-index: 6;
+}
+
+.interactive-animals-container {
+  position: absolute;
+  bottom: 14%;
+  left: 0;
+  width: 820px;
+  height: 250px;
+  z-index: 7;
+}
+
+.interactive-tingua {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 314px;
+  height: 250px;
+  z-index: 9;
+}
+
+.interactive-turtle {
+  position: absolute;
+  bottom: 20%;
+  left: 19%;
+  width: 281px;
+  height: 216px;
+  z-index: 8;
+}
+
+.interactive-cuyo {
+  position: absolute;
+  bottom: 38%;
+  left: 44%;
+  width: 225px;
+  height: 180px;
+}
+
+.interactive-arrows-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.interactive-navigation-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.interactive-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+/* .first {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -226,4 +680,4 @@ section.third img.turtle {
   width: 100%;
   height: 100%;
   transition: top 1.6s ease-in-out;
-}
+} */
