@@ -155,15 +155,9 @@ const interactiveTingua = interactiveSectionElement.querySelector('#interactive-
 const interactiveTurtle = interactiveSectionElement.querySelector('#interactive-turtle');
 const interactiveCuyo = interactiveSectionElement.querySelector('#interactive-cuyo');
 const interactiveText1 = interactiveSectionElement.querySelector('#interactive-text-1');
-const interactiveMirlaSoundBtn = interactiveSectionElement.querySelector(
-  '#interactive-mirla-sound-btn'
-);
-const interactiveTucanSoundBtn = interactiveSectionElement.querySelector(
-  '#interactive-tucan-sound-btn'
-);
-const interactiveSnakeSoundBtn = interactiveSectionElement.querySelector(
-  '#interactive-snake-sound-btn'
-);
+const interactiveMirlaSpeakersA = interactiveSectionElement.querySelector('#mirla-speakers');
+const interactiveTucanSpeakersA = interactiveSectionElement.querySelector('#tucan-speakers');
+const interactiveSnakeSpeakersA = interactiveSectionElement.querySelector('#snake-speakers');
 
 const interactiveLeftTreeContainerObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -255,11 +249,11 @@ const interactiveText1Observer = new IntersectionObserver((entries) => {
   });
 });
 
-const interactiveMirlaSoundBtnObserver = new IntersectionObserver((entries) => {
+const interactiveMirlaSpeakersObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
-        entry.target.classList.add('appear-int-sound-btn');
+        entry.target.classList.add('appear-int-mirla-speakers');
       }, 7000);
     }
   });
@@ -269,7 +263,7 @@ const interactiveTucanSoundBtnObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
-        entry.target.classList.add('appear-int-sound-btn');
+        entry.target.classList.add('appear-int-tucan-speakers');
       }, 7100);
     }
   });
@@ -279,7 +273,7 @@ const interactiveSnakeSoundBtnObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
-        entry.target.classList.add('appear-int-sound-btn');
+        entry.target.classList.add('appear-int-snake-speakers');
       }, 7200);
     }
   });
@@ -294,24 +288,24 @@ interactiveTinguaObserver.observe(interactiveTingua);
 interactiveTurtleObserver.observe(interactiveTurtle);
 interactiveCuyoObserver.observe(interactiveCuyo);
 interactiveText1Observer.observe(interactiveText1);
-interactiveMirlaSoundBtnObserver.observe(interactiveMirlaSoundBtn);
-interactiveTucanSoundBtnObserver.observe(interactiveTucanSoundBtn);
-interactiveSnakeSoundBtnObserver.observe(interactiveSnakeSoundBtn);
+interactiveMirlaSpeakersObserver.observe(interactiveMirlaSpeakersA);
+interactiveTucanSoundBtnObserver.observe(interactiveTucanSpeakersA);
+interactiveSnakeSoundBtnObserver.observe(interactiveSnakeSpeakersA);
 
-let interactiveMirlaState = document.getElementById('interactive-mirla-state');
+let interactiveMirlaState = document.getElementById('interactive-mirla');
 let interactiveMirlaSpeakers = document.getElementById('mirla-speakers');
 let isInteractiveMirla = true;
 let interactiveMirlaAudio = document.getElementById('mirla-audio');
 let isMirlaAudioPlaying = false;
 
 let interactiveTucanSpeakers = document.getElementById('tucan-speakers');
-let interactiveTucanState = document.getElementById('interactive-tucan-state');
+let interactiveTucanState = document.getElementById('interactive-tucan');
 let isInteractiveTucan = true;
 let interactiveTucanAudio = document.getElementById('tucan-audio');
 let isTucanAudioPlaying = false;
 
 let interactiveSnakeSpeakers = document.getElementById('snake-speakers');
-let interactiveSnakeState = document.getElementById('interactive-snake-state');
+let interactiveSnakeState = document.getElementById('interactive-snake');
 let isInteractiveSnake = true;
 let interactiveSnakeAudio = document.getElementById('snake-audio');
 let isSnakeAudioPlaying = false;
@@ -332,6 +326,10 @@ function playAudio(audio) {
     currentAudio = null;
   }
 }
+
+let interactiveMirlaSoundBtn = document.getElementById('interactive-mirla-sound-btn');
+let interactiveTucanSoundBtn = document.getElementById('interactive-tucan-sound-btn');
+let interactiveSnakeSoundBtn = document.getElementById('interactive-snake-sound-btn');
 
 interactiveMirlaSoundBtn.addEventListener('click', () => {
   isInteractiveMirla = !isInteractiveMirla;
