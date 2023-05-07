@@ -175,13 +175,18 @@
             src="./assets/escena-2-interacciones/1-mirla-estado-1.png"
             alt="Tingua estado 1"
           />
-          <button type="button" class="interactive-sound-btn-off">
+          <button type="button" id="interactive-mirla-sound-btn" class="interactive-sound-btn-off">
             <img
+              id="mirla-speakers"
               class="speakers"
-              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
-              alt="Botón de sonido encendido"
+              src="./assets/escena-2-interacciones/boton-sonido-apagado.png"
+              alt="Botón de sonido apagado"
             />
           </button>
+          <audio
+            src="./assets/escena-2-interacciones/test-bird-sound-1.wav"
+            id="mirla-audio"
+          ></audio>
         </div>
         <div id="interactive-right-tree-container" class="interactive-right-tree-container">
           <img
@@ -205,25 +210,35 @@
           <button
             type="button"
             id="interactive-tucan-sound-btn"
-            class="interactive-tucan-sound-btn-on"
+            class="interactive-tucan-sound-btn-off"
           >
             <img
+              id="tucan-speakers"
               class="speakers"
-              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
-              alt="Botón de sonido encendido"
+              src="./assets/escena-2-interacciones/boton-sonido-apagado.png"
+              alt="Botón de sonido apagado"
             />
           </button>
+          <audio
+            src="./assets/escena-2-interacciones/test-bird-sound-1.wav"
+            id="tucan-audio"
+          ></audio>
           <button
             type="button"
             id="interactive-snake-sound-btn"
-            class="interactive-snake-sound-btn-on"
+            class="interactive-snake-sound-btn-off"
           >
             <img
+              id="snake-speakers"
               class="speakers"
-              src="./assets/escena-2-interacciones/boton-sonido-encendido.png"
-              alt="Botón de sonido encendido"
+              src="./assets/escena-2-interacciones/boton-sonido-apagado.png"
+              alt="Botón de sonido apagado"
             />
           </button>
+          <audio
+            src="./assets/escena-2-interacciones/test-bird-sound-1.wav"
+            id="snake-audio"
+          ></audio>
         </div>
         <div class="interactive-animals-container">
           <img
@@ -259,7 +274,11 @@
               alt="Botón de retroceder"
             />
           </button>
-          <button type="button" id="interactive-next-btn" class="interactive-navigation-btn">
+          <button
+            type="button"
+            id="interactive-next-btn"
+            class="interactive-navigation-btn disabled-btn"
+          >
             <img
               class="interactive-arrow"
               src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
