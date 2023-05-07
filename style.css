@@ -566,12 +566,32 @@ body {
 
 .interactive-left-tree-container {
   position: absolute;
-  top: 0;
-  right: 34%;
+  opacity: 0;
   width: 273px;
   height: 464px;
   display: flex;
   z-index: 2;
+}
+
+.appear-left-tree-container {
+  top: -100%;
+  right: 34%;
+  opacity: 0;
+  animation: fadeInLeftTreeContainer 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeftTreeContainer {
+  0% {
+    opacity: 0;
+    top: -100%;
+    right: 34%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+    right: 34%;
+  }
 }
 
 .interactive-left-tree {
@@ -580,15 +600,14 @@ body {
   left: 0;
 }
 
-.interactive-tingua-state-1 {
+.interactive-mirla-state-1 {
   position: absolute;
-  top: 0;
-  left: 12%;
+  opacity: 0;
   width: 110px;
   height: 154px;
 }
 
-.interactive-tingua-state-2 {
+.interactive-mirla-state-2 {
   position: absolute;
   top: 8%;
   left: 5%;
@@ -597,6 +616,26 @@ body {
   display: none;
 }
 
+.appear-int-mirla {
+  top: -100%;
+  left: 12%;
+  opacity: 0;
+  animation: fadeInIntMirla 0.75s ease-in-out forwards;
+}
+
+@keyframes fadeInIntMirla {
+  0% {
+    top: -100%;
+    left: 12%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    left: 12%;
+    opacity: 1;
+  }
+}
 
 .interactive-left-tree-container .interactive-sound-btn-on {
   all: unset;
@@ -604,6 +643,7 @@ body {
   position: absolute;
   top: 35%;
   left: 18%;
+  opacity: 0;
 }
 
 .interactive-left-tree-container .interactive-sound-btn-off {
@@ -612,6 +652,7 @@ body {
   position: absolute;
   top: 35%;
   left: 18%;
+  opacity: 0;
 }
 
 .speakers {
@@ -621,20 +662,60 @@ body {
 
 .interactive-right-tree-container {
   position: absolute;
-  top: 0;
-  right: 6%;
+  opacity: 0;
   width: 412px;
   height: 724px;
   display: flex;
   z-index: 3;
 }
 
+.appear-right-tree-container {
+  top: -100%;
+  right: 6%;
+  opacity: 0;
+  animation: fadeInRightTreeContainer 1s ease-in-out forwards;
+}
+
+@keyframes fadeInRightTreeContainer {
+  0% {
+    opacity: 0;
+    top: -100%;
+    right: 6%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+    right: 6%;
+  }
+}
+
 .interactive-snake {
   position: absolute;
-  bottom: 8%;
-  right: 0;
+  opacity: 0;
   width: 200px;
   height: 212px;
+}
+
+.appear-int-snake {
+  bottom: 8%;
+  left: 15%;
+  opacity: 0;
+  animation: fadeInIntSnake 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInIntSnake {
+  0% {
+    bottom: 8%;
+    left: 15%;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 8%;
+    left: 55%;
+    opacity: 1;
+  }
 }
 
 .interactive-right-tree {
@@ -648,8 +729,7 @@ body {
 
 .interactive-tucan-state-1 {
   position: absolute;
-  top: 0;
-  right: 0;
+  opacity: 0;
   width: 153px;
   height: 182px;
   z-index: 5;
@@ -664,6 +744,27 @@ body {
   z-index: 5;
 }
 
+.appear-int-tucan {
+  top: -100%;
+  right: 0;
+  opacity: 0;
+  animation: fadeInIntTucan 0.75s ease-in-out forwards;
+}
+
+@keyframes fadeInIntTucan {
+  0% {
+    top: -100%;
+    right: 0;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
 .interactive-right-tree-container .interactive-tucan-sound-btn-on {
   all: unset;
   cursor: pointer;
@@ -671,6 +772,7 @@ body {
   top: 30%;
   right: 19%;
   z-index: 6;
+  opacity: 0;
 }
 
 .interactive-right-tree-container .interactive-tucan-sound-btn-off {
@@ -680,6 +782,7 @@ body {
   top: 30%;
   right: 19%;
   z-index: 6;
+  opacity: 0;
 }
 
 .interactive-right-tree-container .interactive-snake-sound-btn-on {
@@ -689,6 +792,7 @@ body {
   bottom: 6%;
   right: 20%;
   z-index: 6;
+  opacity: 0;
 }
 
 .interactive-right-tree-container .interactive-snake-sound-btn-off {
@@ -698,6 +802,22 @@ body {
   bottom: 6%;
   right: 20%;
   z-index: 6;
+  opacity: 0;
+}
+
+.appear-int-sound-btn {
+  opacity: 0;
+  animation: fadeInSoundBtn 1.25s ease-in-out forwards;
+}
+
+@keyframes fadeInSoundBtn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .interactive-animals-container {
@@ -711,28 +831,116 @@ body {
 
 .interactive-tingua {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  opacity: 0;
   width: 314px;
   height: 250px;
   z-index: 9;
 }
 
+.appear-int-tingua {
+  bottom: 0;
+  left: -50%;
+  opacity: 0;
+  animation: fadeInIntTingua 1s ease-in-out forwards;
+}
+
+@keyframes fadeInIntTingua {
+  0% {
+    bottom: 0;
+    left: -50%;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+
 .interactive-turtle {
   position: absolute;
-  bottom: 20%;
-  left: 19%;
+  opacity: 0;
   width: 281px;
   height: 216px;
   z-index: 8;
 }
 
+.appear-int-turtle {
+  bottom: 20%;
+  left: -50%;
+  opacity: 0;
+  animation: fadeInIntTurtle 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInIntTurtle {
+  0% {
+    bottom: 20%;
+    left: -70%;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 20%;
+    left: 19%;
+    opacity: 1;
+  }
+}
+
 .interactive-cuyo {
   position: absolute;
-  bottom: 38%;
-  left: 44%;
+  opacity: 0;
   width: 225px;
   height: 180px;
+}
+
+.appear-int-cuyo {
+  bottom: 20%;
+  left: -50%;
+  opacity: 0;
+  animation: fadeInIntCuyo 1.3s ease-in-out forwards;
+}
+
+@keyframes fadeInIntCuyo {
+  0% {
+    bottom: 38%;
+    left: -70%;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 38%;
+    left: 44%;
+    opacity: 1;
+  }
+}
+
+.interactive-text-1 {
+  position: absolute;
+  opacity: 0;
+  width: 538px;
+  height: 266px;
+}
+
+.appear-int-text-1 {
+  top: -50%;
+  left: 5%;
+  opacity: 0;
+  animation: fadeInIntText1 1.35s ease-in-out forwards;
+}
+
+@keyframes fadeInIntText1 {
+  0% {
+    top: -50%;
+    left: 5%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 10%;
+    left: 5%;
+    opacity: 1;
+  }
 }
 
 .interactive-arrows-container {
