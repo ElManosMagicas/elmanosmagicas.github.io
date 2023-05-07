@@ -37,16 +37,38 @@ body {
 }
 
 .map-buttons-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 940px;
   height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
+}
+
+.bottom-to-top-img {
+  opacity: 0;
+  position: absolute;
+  top: 150%;
+  /* Set the initial position to the bottom */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bottomToTop 1s ease-in-out forwards;
+}
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    top: 150%;
+    /* Start with the item at the bottom */
+  }
+
+  100% {
+    opacity: 1;
+    top: 50%;
+    /* Move the item to its final position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .map-logs {
@@ -88,11 +110,31 @@ body {
 
 .cuyo-marker {
   position: absolute;
-  bottom: 42%;
-  left: 8%;
+    bottom: 42%;
+    left: 8%;
   width: 182px;
   height: 200px;
   z-index: 3;
+}
+
+.appearMarker {
+  opacity: 0;
+  animation: fadeInMarker 2s ease-in-out forwards;
+}
+
+@keyframes fadeInMarker {
+  0% {
+    opacity: 0;
+    /* Start with the item at the bottom */
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .island {
@@ -102,10 +144,32 @@ body {
 
 .map-text {
   position: absolute;
-  top: 0;
-  right: 0;
   width: 475px;
   height: 160px;
+}
+
+.appearText {
+  opacity: 0;
+  animation: fadeInText 3s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    /* Start with the item at the bottom */
+  }
+
+  66% {
+    opacity: 0;
+    top: -20%;
+    right: 0;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+    right: 0;
+  }
 }
 
 .map-arrows-container {
