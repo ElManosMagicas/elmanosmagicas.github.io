@@ -49,7 +49,6 @@ body {
   opacity: 0;
   position: absolute;
   top: 150%;
-  /* Set the initial position to the bottom */
   left: 50%;
   transform: translate(-50%, -50%);
   animation: bottomToTop 1s ease-in-out forwards;
@@ -59,13 +58,11 @@ body {
   0% {
     opacity: 0;
     top: 150%;
-    /* Start with the item at the bottom */
   }
 
   100% {
     opacity: 1;
     top: 50%;
-    /* Move the item to its final position */
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -76,7 +73,7 @@ body {
   height: 399px;
 }
 
-.map-buttons-container .map-tree-btn {
+.map-buttons-container .map-forest-btn {
   all: unset;
   cursor: pointer;
   position: absolute;
@@ -84,8 +81,8 @@ body {
   left: 32%;
 }
 
-.map-buttons-container .map-tree-btn.disabled-btn {
-  cursor: not-allowed;
+.map-forest-btn:hover img[src="./assets/escena-0-mapa-decisiones/2-bosque-neutral.png"] {
+  content: url("./assets/escena-0-mapa-decisiones/2-bosque-on.png");
 }
 
 .map-buttons-container .map-city-btn {
@@ -107,6 +104,9 @@ body {
   bottom: 14%;
   left: 4%;
 }
+.map-buttons-container .map-waterland-btn.disabled-btn {
+  cursor: not-allowed;
+}
 
 .cuyo-marker {
   position: absolute;
@@ -125,7 +125,6 @@ body {
 @keyframes fadeInMarker {
   0% {
     opacity: 0;
-    /* Start with the item at the bottom */
   }
 
   50% {
@@ -156,7 +155,6 @@ body {
 @keyframes fadeInText {
   0% {
     opacity: 0;
-    /* Start with the item at the bottom */
   }
 
   66% {

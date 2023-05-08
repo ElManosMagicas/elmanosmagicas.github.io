@@ -1,7 +1,11 @@
 window.onload = () => {
-  let mapWaterlandBtn = document.getElementById('map-waterland-btn');
-  mapWaterlandBtn.addEventListener('click', () => {
+  let mapForestBtn = document.getElementById('map-forest-btn');
+  mapForestBtn.addEventListener('click', () => {
     forestSection.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      let narration1Page2 = new Audio('./assets/sounds/escena-1/narration-1-page-2.aac');
+      narration1Page2.play();
+    }, 3000);
   });
 
   let mapNextBtn = document.getElementById('map-next-btn');
@@ -30,6 +34,7 @@ window.onload = () => {
     forestSection.scrollIntoView({ behavior: 'smooth' });
   });
 };
+
 const forestSectionElement = document.querySelector('#forest-section');
 const forestRightTree = forestSectionElement.querySelector('#forest-right-tree');
 const forestLeftTree = forestSectionElement.querySelector('#forest-left-tree');
@@ -126,10 +131,12 @@ const forestText2Observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add('appear-text-2');
-      }, 9000);
+      }, 19000);
     }
   });
 });
+
+let narration2Page2 = document.getElementById('narration-2-page-2');
 
 forestRightTreeObserver.observe(forestRightTree);
 forestLeftTreeObserver.observe(forestLeftTree);
