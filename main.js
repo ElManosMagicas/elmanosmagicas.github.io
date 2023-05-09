@@ -2,10 +2,6 @@ window.onload = () => {
   let mapForestBtn = document.getElementById('map-forest-btn');
   mapForestBtn.addEventListener('click', () => {
     forestSection.scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => {
-      let narration1Page2 = new Audio('./assets/sounds/escena-1/narration-1-page-2.aac');
-      narration1Page2.play();
-    }, 3000);
   });
 
   let mapNextBtn = document.getElementById('map-next-btn');
@@ -13,6 +9,18 @@ window.onload = () => {
 
   mapNextBtn.addEventListener('click', () => {
     forestSection.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      let narration1Page2 = new Audio('./assets/sounds/escena-1-narracion-1.mp3');
+      narration1Page2.play().catch((error) => {
+        console.log('Error playing audio:', error);
+      });
+    }, 2500);
+    setTimeout(() => {
+      let narration2Page2 = new Audio('./assets/sounds/escena-1-narracion-2.mp3');
+      narration2Page2.play().catch((error) => {
+        console.log('Error playing audio:', error);
+      });
+    }, 18500);
   });
 
   let forestNextBtn = document.getElementById('forest-next-btn');
@@ -20,6 +28,12 @@ window.onload = () => {
 
   forestNextBtn.addEventListener('click', () => {
     interactiveSection.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      let narration1Page3 = new Audio('./assets/sounds/escena-2-narracion-1.mp3');
+      narration1Page3.play().catch((error) => {
+        console.log('Error playing audio:', error);
+      });
+    }, 6000);
   });
 
   let forestBackBtn = document.getElementById('forest-back-btn');
@@ -131,7 +145,7 @@ const forestText2Observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add('appear-text-2');
-      }, 19000);
+      }, 17500);
     }
   });
 });
