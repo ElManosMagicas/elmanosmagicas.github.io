@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El camino de la tortuga</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <div class="container">
@@ -21,10 +22,10 @@
             src="./assets/escena-0-mapa-decisiones/1-tronco.png"
             alt="Fondo mapa de decisiones"
           />
-          <button type="button" class="map-tree-btn disabled-btn" disabled>
+          <button type="button" id="map-forest-btn" class="map-forest-btn">
             <img
               class="island"
-              src="./assets/escena-0-mapa-decisiones/2-bosque-off.png"
+              src="./assets/escena-0-mapa-decisiones/2-bosque-neutral.png"
               alt="Botón de bosque"
             />
           </button>
@@ -35,10 +36,15 @@
               alt="Botón de ciudad"
             />
           </button>
-          <button type="button" id="map-waterland-btn" class="map-waterland-btn">
+          <button
+            type="button"
+            id="map-waterland-btn"
+            class="map-waterland-btn disabled-btn"
+            disabled
+          >
             <img
               class="island"
-              src="./assets/escena-0-mapa-decisiones/3-humedal-on.png"
+              src="./assets/escena-0-mapa-decisiones/3-humedal-neutral.png"
               alt="Botón de humedad"
             />
           </button>
@@ -55,18 +61,10 @@
         />
         <div class="map-arrows-container">
           <button type="button" id="map-back-btn" class="map-navigation-btn disabled-btn">
-            <img
-              class="map-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
-              alt="Botón de retroceder"
-            />
+            <img class="map-arrow" src="./assets/ui/back-arrow.svg" alt="Botón de retroceder" />
           </button>
           <button type="button" id="map-next-btn" class="map-navigation-btn">
-            <img
-              class="map-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
-              alt="Botón de avanzar"
-            />
+            <img class="map-arrow" src="./assets/ui/next-arrow.svg" alt="Botón de avanzar" />
           </button>
         </div>
       </section>
@@ -140,18 +138,10 @@
         </div>
         <div class="forest-arrows-container">
           <button type="button" id="forest-back-btn" class="forest-navigation-btn">
-            <img
-              class="forest-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
-              alt="Botón de retroceder"
-            />
+            <img class="forest-arrow" src="./assets/ui/back-arrow.svg" alt="Botón de retroceder" />
           </button>
           <button type="button" id="forest-next-btn" class="forest-navigation-btn">
-            <img
-              class="forest-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
-              alt="Botón de avanzar"
-            />
+            <img class="forest-arrow" src="./assets/ui/next-arrow.svg" alt="Botón de avanzar" />
           </button>
         </div>
       </section>
@@ -274,7 +264,7 @@
           <button type="button" id="interactive-back-btn" class="interactive-navigation-btn">
             <img
               class="interactive-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-back-arrow.svg"
+              src="./assets/ui/back-arrow.svg"
               alt="Botón de retroceder"
             />
           </button>
@@ -285,11 +275,12 @@
           >
             <img
               class="interactive-arrow"
-              src="./assets/escena-0-mapa-decisiones/6-next-arrow.svg"
+              src="./assets/ui/next-arrow.svg"
               alt="Botón de avanzar"
             />
           </button>
         </div>
+        <audio src="./assets/sounds/escena-2-narracion-1.mp3" id="interactive-narration-1"></audio>
       </section>
     </div>
 
