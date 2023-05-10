@@ -2,6 +2,18 @@ window.onload = () => {
   let mapForestBtn = document.getElementById('map-forest-btn');
   mapForestBtn.addEventListener('click', () => {
     forestSection.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      let narration1Page2 = new Audio('./assets/sounds/escena-1-narracion-1.mp3');
+      narration1Page2.play().catch((error) => {
+        console.log('Error playing audio:', error);
+      });
+    }, 2500);
+    setTimeout(() => {
+      let narration2Page2 = new Audio('./assets/sounds/escena-1-narracion-2.mp3');
+      narration2Page2.play().catch((error) => {
+        console.log('Error playing audio:', error);
+      });
+    }, 18500);
   });
 
   let mapNextBtn = document.getElementById('map-next-btn');
